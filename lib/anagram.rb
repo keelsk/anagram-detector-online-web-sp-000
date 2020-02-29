@@ -9,9 +9,9 @@ class Anagram
   end
   
   def match(word_array)
-    word_array.find do |word|
+    selected_word = word_array.collect do |word|
       if word.split("").sort == @word.split("").sort
-        return word
+        word
       else
         return []
       end
